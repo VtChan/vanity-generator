@@ -15,7 +15,7 @@ self.onmessage = function (e) {
 
     if (matchesPrefix && matchesSuffix) {
       // console.log("address:"+newWallet.address+", privKey:"+newWallet.privateKey)
-      self.postMessage({ wallet: newWallet, attempts, threadId });
+      self.postMessage({ wallet: newWallet, privKey: newWallet.privateKey, attempts, threadId });
       break;
     }
   }
